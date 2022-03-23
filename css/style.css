@@ -47,6 +47,33 @@ body {
   margin-left: 1.14vw;
 }
 
+.link span {
+  padding-bottom: .15vw;
+  position: relative;
+  display: inline-flex;
+}
+
+.link span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.link:hover span::before {
+  transform: scaleX(1);
+}
+
+.link.link-black span::before {
+  background-color: black;
+}
+
 @media (max-width: 1023.98px) {
   .link img {
     width: 14vw;
