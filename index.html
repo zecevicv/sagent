@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he-IL" dir="rtl">
+<html lang="en-US">
 
 <head>
   <!-- Meta -->
@@ -9,6 +9,9 @@
   <title>Sagent</title>
 
   <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Style (Vendor) -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -21,12 +24,610 @@
   <link rel="icon" href="img/favicon.png">
 </head>
 
-<body>
+<body class="home-page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <!-- Logo -->
+      <div class="header-logo">
+        <a href="#"><img class="lazy" data-src="img/global/logo.png" alt="sagent-img"></a>
+      </div>
+      <!-- Menu -->
+      <div class="header-menu d-desktop">
+        <div class="header-links">
+          <ul class="f-d-18 light">
+            <!-- Item -->
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#">Clients</a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#" class="header-btn f-d-16">Global <img src="img/icons/chevron-down.svg" alt="sagent-img"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Action -->
+      <div class="header-action d-mobile">
+        <div class="header-hamburger">
+          <a href="#"><img src="img/icons/hamburger.svg" alt="sagent-img"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home Banner -->
+  <div class="home-banner">
+    <!-- Text -->
+    <div class="text">
+      <h1 class="f-d-55 f-m-60 medium">
+        A GLOBAL, CUSTOMIZED SUITE
+      </h1>
+      <p class="f-d-30 f-m-40 light">
+        OF FINANCIAL, TAX & OPERATIONAL SERVICES
+      </p>
+      <a href="#" class="link f-d-20 f-m-30 light">Learn More <img class="lazy" data-src="img/icons/arrow-circled-right.svg" alt="sagent-img"></a>
+    </div>
+    <!-- Img -->
+    <div class="img">
+      <picture>
+        <source media="(min-width:1024px)" srcset="img/home/banner.jpg">
+        <img class="lazy" data-src="img/home/banner-mobile.jpg" alt="sagent-img">
+      </picture>
+    </div>
+    <!-- Scroll -->
+    <div class="banner-scroll">
+      <a href="#" class="f-d-18 f-m-30 light"><img class="lazy" data-src="img/icons/arrow-left.svg" alt="sagent-img"> Scroll</a>
+    </div>
+    <!-- Social -->
+    <div class="banner-social">
+      <ul>
+        <!-- Item -->
+        <li>
+          <a href="#"><img class="lazy" data-src="img/icons/tw.svg" alt="sagent-img"></a>
+        </li>
+        <!-- Item -->
+        <li>
+          <a href="#"><img class="lazy" data-src="img/icons/in.svg" alt="sagent-img"></a>
+        </li>
+        <!-- Item -->
+        <li>
+          <a href="#"><img class="lazy" data-src="img/icons/fb.svg" alt="sagent-img"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Home Sections -->
+  <div class="home-sections">
+    <!-- Numbers -->
+    <div class="numbers">
+      <div class="container">
+        <div class="heading">
+          <h2 class="f-d-45 f-m-50 medium section-title">
+            Sagent
+            <br>in Numbers
+          </h2>
+          <p class="f-d-18 f-m-30 light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius dictum libero eu gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+        <!-- Nums -->
+        <div class="nums">
+          <ul>
+            <!-- Item -->
+            <li>
+              <h3 class="section-title f-d-80 f-m-80 semi-bold text-blue"><span class="num">20</span></h3>
+              <p class="f-d-16 f-m-26">Portfolio Companies
+                Acquired</p>
+            </li>
+            <!-- Item -->
+            <li>
+              <h3 class="section-title f-d-80 f-m-80 semi-bold text-blue"><span class="num">8</span>B</h3>
+              <p class="f-d-16 f-m-26">Raised by our
+                Clients</p>
+            </li>
+            <!-- Item -->
+            <li>
+              <h3 class="section-title f-d-80 f-m-80 semi-bold text-blue"><span class="num">430</span></h3>
+              <p class="f-d-16 f-m-26">Companies Served</p>
+            </li>
+            <!-- Item -->
+            <li>
+              <h3 class="section-title f-d-80 f-m-80 semi-bold text-blue"><span class="num">14</span>M</h3>
+              <p class="f-d-16 f-m-26">Cash Managed</p>
+            </li>
+            <!-- Item -->
+            <li>
+              <h3 class="section-title f-d-80 f-m-80 semi-bold text-blue"><span class="num">430</span></h3>
+              <p class="f-d-16 f-m-26">Funding Rounds in the
+                Last 4 Years</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Advantages -->
+    <div class="home-advantages">
+      <div class="container">
+        <div class="heading">
+          <h2 class="section-title f-d-45 f-m-50 medium">
+            Sagent
+            <br>Advantages
+          </h2>
+          <p class="f-d-18 f-m-30 light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius dictum libero eu gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          <a href="#" class="link f-d-20 f-m-30 light">Learn More <img class="lazy" data-src="img/icons/arrow-circled-right-black.svg" alt="sagent-img"></a>
+        </div>
+        <div class="cards">
+          <div class="accordion on-hover">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Collapsible -->
+                  <div class="collapsible show">
+                    <!-- Toggler -->
+                    <div class="collapse-toggler">
+                      <h3 class="f-d-30 f-m-40">01</h3>
+                      <h4 class="f-d-28 f-m-40">Global Knowledge,
+                       <br> Local Service.</h4>
+                    </div>
+                    <!-- Collapse -->
+                    <div class="collapse" style="height: auto">
+                      <div>
+                        <p class="f-d-16 f-m-26 light">Our unique global structure, encompassing the USA (East and West coast), Israel and Taiwan, enables us to provide expert local services should you choose to expand your business within or to the USA, Israel or the Asia Pacific region.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Collapsible -->
+                  <div class="collapsible">
+                    <!-- Toggler -->
+                    <div class="collapse-toggler">
+                      <h3 class="f-d-30 f-m-40">02</h3>
+                      <h4 class="f-d-28 f-m-40">Broad Ecosystem Knowledge, 
+                        <br>Extensive Network.</h4>
+                    </div>
+                    <!-- Collapse -->
+                    <div class="collapse">
+                      <div>
+                        <p class="f-d-16 f-m-26 light">Our unique global structure, encompassing the USA (East and West coast), Israel and Taiwan, enables us to provide expert local services should you choose to expand your business within or to the USA, Israel or the Asia Pacific region.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide -->
+                <div class="swiper-slide">
+                  <!-- Collapsible -->
+                  <div class="collapsible">
+                    <!-- Toggler -->
+                    <div class="collapse-toggler">
+                      <h3 class="f-d-30 f-m-40">03</h3>
+                      <h4 class="f-d-28 f-m-40">Outsourced Services,
+                       <br> In-House Approach.</h4>
+                    </div>
+                    <!-- Collapse -->
+                    <div class="collapse">
+                      <div>
+                        <p class="f-d-16 f-m-26 light">Our unique global structure, encompassing the USA (East and West coast), Israel and Taiwan, enables us to provide expert local services should you choose to expand your business within or to the USA, Israel or the Asia Pacific region.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-arrows">
+              <div class="prev"><img class="lazy" data-src="img/icons/arrow-right-circled-blue.svg" alt="sagent-img"></div>
+              <div class="next"><img class="lazy" data-src="img/icons/arrow-right-circled-blue.svg" alt="sagent-img"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Home Services -->
+    <div class="home-services">
+      <div class="img">
+        <picture>
+          <source media="(min-width:1024px)" srcset="img/home/services-bg.jpg">
+          <img class="lazy" data-src="img/home/services-bg-mobile.jpg" alt="sagent-img">
+        </picture>
+      </div>
+      <div class="text">
+        <!-- Heading -->
+        <div class="heading">
+          <h2 class="f-d-45 f-m-50 medium">
+            Sagent
+            <br>Services
+          </h2>
+          <p class="f-d-18 f-m-30 light">Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Morbi varius dictum libero eu 
+            gravida. Orci varius natoque penatibus et 
+            magnis dis parturient montes, nascetur 
+            ridiculus mus.</p>
+        </div>
+        <!-- Cards -->
+        <div class="cards">
+          <!-- Card -->
+          <div class="card">
+            <div>
+              <img class="icon lazy" data-src="img/icons/coins.svg" alt="sagent-img">
+              <h3 class="f-d-35 f-m-40 regular">Financial
+                <br>Services</h3>
+            </div>
+            <div>
+              <a href="#"><img class="lazy" data-src="img/icons/arrow-right-blue.svg" alt="sagent-img"></a>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="card">
+            <div>
+              <img class="icon lazy" data-src="img/icons/suitcase.svg" alt="sagent-img">
+              <h3 class="f-d-35 f-m-40 regular">Tax
+                <br>Services</h3>
+            </div>
+            <div>
+              <a href="#"><img class="lazy" data-src="img/icons/arrow-right-blue.svg" alt="sagent-img"></a>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="card">
+            <div>
+              <img class="icon lazy" data-src="img/icons/graph.svg" alt="sagent-img">
+              <h3 class="f-d-35 f-m-40 regular">Consulting</h3>
+            </div>
+            <div>
+              <a href="#"><img class="lazy" data-src="img/icons/arrow-right-blue.svg" alt="sagent-img"></a>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="card alt">
+            <div>
+              <p class="f-d-20 f-m-30 light">View All Services</p>
+            </div>
+            <div>
+              <a href="#"><img class="lazy" data-src="img/icons/arrow-circled-right.svg" alt="sagent-img"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home Clients -->
+  <div class="home-clients">
+    <div class="container">
+      <!-- Heading -->
+      <div class="heading">
+        <h2 class="section-title f-d-45 f-m-50 medium">
+          Our Clients
+        </h2>
+      </div>
+      <!-- List -->
+      <ul>
+        <li class="post">
+          <div class="img">
+            <img class="lazy" data-src="img/home/clients.jpg" alt="sagent-img">
+          </div>
+          <div class="text">
+            <h2 class="f-d-45 f-m-40 regular">
+              Join More of
+              <br>
+              <span class="semi-bold">40 Individual Clients</span> 
+              <br>
+              Around The World
+            </h2>
+            <a href="#" class="link f-d-20 f-m-30 light">Learn More <img class="lazy" data-src="img/icons/arrow-circled-right.svg" alt="sagent-img"></a>
+          </div>
+        </li>
+        <li class="logo">
+          <img class="lazy" data-src="img/home/logo-1.jpg" alt="sagent-img">
+        </li>
+        <li class="logo">
+          <img class="lazy" data-src="img/home/logo-2.jpg" alt="sagent-img">
+        </li>
+        <li class="logo">
+          <img class="lazy" data-src="img/home/logo-3.jpg" alt="sagent-img">
+        </li>
+        <li class="logo">
+          <img class="lazy" data-src="img/home/logo-4.jpg" alt="sagent-img">
+        </li>
+        <li class="logo">
+          <img class="lazy" data-src="img/home/logo-5.jpg" alt="sagent-img">
+        </li>
+        <li class="logo">
+          <img class="lazy" data-src="img/home/logo-6.jpg" alt="sagent-img">
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Testiomonials -->
+  <div class="testimonials">
+    <div class="container">
+      <!-- Heading -->
+      <div class="heading">
+        <h2 class="section-title f-d-45 f-m-50 medium">
+          Testimonials
+        </h2>
+        <div class="swiper-arrows">
+          <div class="prev"><img class="lazy" data-src="img/icons/arrow-right-circled-blue.svg" alt="sagent-img"></div>
+          <div class="next"><img class="lazy" data-src="img/icons/arrow-right-circled-blue.svg" alt="sagent-img"></div>
+        </div>
+      </div>
+      <!-- Slider -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide -->
+          <div class="swiper-slide">
+            <div>
+              <img class="lazy" data-src="img/icons/quottes.svg" alt="sagent-img">
+              <h3 class="f-d-30 f-m-30 regular">Hagi Schwartz</h3>
+              <h4 class="f-d-14 f-m-26 ultra-light">Venture Capitalist, Magnolia Capital
+                and WTI</h4>
+              <p class="f-d-16 f-m-28 light">The team at Sagent is consistently spot on with its technical knowledge, subject matter expertise and strategic advice. What’s more, they wrap this up with premium and personalized client service and always go the extra mile.</p>
+            </div>
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide">
+            <div>
+              <img class="lazy" data-src="img/icons/quottes.svg" alt="sagent-img">
+              <h3 class="f-d-30 f-m-30 regular">Hagi Schwartz</h3>
+              <h4 class="f-d-14 f-m-26 ultra-light">Venture Capitalist, Magnolia Capital
+                and WTI</h4>
+              <p class="f-d-16 f-m-28 light">The team at Sagent is consistently spot on with its technical knowledge, subject matter expertise and strategic advice. What’s more, they wrap this up with premium and personalized client service and always go the extra mile.</p>
+            </div>
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide">
+            <div>
+              <img class="lazy" data-src="img/icons/quottes.svg" alt="sagent-img">
+              <h3 class="f-d-30 f-m-30 regular">Hagi Schwartz</h3>
+              <h4 class="f-d-14 f-m-26 ultra-light">Venture Capitalist, Magnolia Capital
+                and WTI</h4>
+              <p class="f-d-16 f-m-28 light">The team at Sagent is consistently spot on with its technical knowledge, subject matter expertise and strategic advice. What’s more, they wrap this up with premium and personalized client service and always go the extra mile.</p>
+            </div>
+          </div>
+          <!-- Slide -->
+          <div class="swiper-slide">
+            <div>
+              <img class="lazy" data-src="img/icons/quottes.svg" alt="sagent-img">
+              <h3 class="f-d-30 f-m-30 regular">Hagi Schwartz</h3>
+              <h4 class="f-d-14 f-m-26 ultra-light">Venture Capitalist, Magnolia Capital
+                and WTI</h4>
+              <p class="f-d-16 f-m-28 light">The team at Sagent is consistently spot on with its technical knowledge, subject matter expertise and strategic advice. What’s more, they wrap this up with premium and personalized client service and always go the extra mile.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <!-- Top -->
+    <div class="footer-top">
+      <div class="container">
+        <!-- Info -->
+        <div class="footer-contact-info">
+          <h2 class="f-d-45 f-m-50 medium">
+            Contact Us
+          </h2>
+          <h3 class="f-d-18 f-m-30 light">Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Morbi varius dictum libero
+            eu gravida.</h3>
+          <p class="f-d-18 f-m-28">United States</p>
+          <ul>
+            <li>
+              <p class="f-d-18 f-m-28 light">
+                <img class="lazy" data-src="img/icons/phone.svg" alt="sagent-img">
+                (408) 263-1040
+              </p>
+            </li>
+            <li>
+              <p class="f-d-18 f-m-28 light">
+                <img class="lazy" data-src="img/icons/email.svg" alt="sagent-img">
+                info@sagentmanagement.com
+              </p>
+            </li>
+          </ul>
+          <p class="f-d-18 f-m-28">Israel</p>
+          <ul>
+            <li>
+              <p class="f-d-18 f-m-28 light">
+                <img class="lazy" data-src="img/icons/phone.svg" alt="sagent-img">
+                +972-3-5390600
+              </p>
+            </li>
+            <li>
+              <p class="f-d-18 f-m-28 light">
+                <img class="lazy" data-src="img/icons/email.svg" alt="sagent-img">
+                israel@sagentmanagement.com
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- Form -->
+        <div class="footer-contact-form">
+          <form>
+            <input type="text" class="input-primary f-d-18 f-m-30 light" placeholder="Name">
+            <input type="text" class="input-primary f-d-18 f-m-30 light" placeholder="Phone">
+            <input type="text" class="input-primary f-d-18 f-m-30 light" placeholder="Email">
+            <input type="text" class="input-primary f-d-18 f-m-30 light" placeholder="Company Name">
+            <select class="select-primary f-d-18 f-m-30 light">
+              <option value="1">Location</option>
+              <option value="2">Location</option>
+            </select>
+            <select class="select-primary f-d-18 f-m-30 light">
+              <option value="1">Service</option>
+              <option value="2">Service</option>
+            </select>
+            <input type="text" class="input-primary f-d-18 f-m-30 light" placeholder="Message">
+          </form>
+          <a href="#" class="link f-d-20 f-m-30 light">Submit <img class="lazy" data-src="img/icons/arrow-circled-right.svg" alt="sagent-img"></a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <!-- Main -->
+        <div class="footer-main">
+          <!-- Info -->
+          <div class="footer-info">
+            <div class="footer-logo"><img class="lazy" data-src="img/global/logo.png" alt="sagent-img"></div>
+            <p class="f-d-16 f-m-26 light">Company Number: OC 111-111
+              <br><br>
+              Registered Address: 732 N. Diamond Bar Blvd.
+              <br>
+              Suite 224 Diamond Bar, CA 91765</p>
+          </div>
+          <!-- Menu -->
+          <div class="footer-menu">
+            <!-- Accordion -->
+            <div class="accordion">
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <p class="f-d-18 f-m-30"><a href="#">Home Page</a></p>
+              </div>
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <!-- Toggler -->
+                <div class="collapse-toggler">
+                  <p class="f-d-18 f-m-30">About Us</p>
+                  <div class="simbol d-mobile f-m-30">
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                  </div>
+                </div>
+                <!-- Collapse -->
+                <div class="collapse">
+                  <div>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Company</a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Vision</a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Team</a></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <!-- Toggler -->
+                <div class="collapse-toggler">
+                  <p class="f-d-18 f-m-30">Services</p>
+                  <div class="simbol d-mobile f-m-30">
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                  </div>
+                </div>
+                <!-- Collapse -->
+                <div class="collapse">
+                  <div>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Financial</a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Tax</a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Consulting</a></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <!-- Toggler -->
+                <div class="collapse-toggler">
+                  <p class="f-d-18 f-m-30">Clients</p>
+                  <div class="simbol d-mobile f-m-30">
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                  </div>
+                </div>
+                <!-- Collapse -->
+                <div class="collapse">
+                  <div>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Our Clients</a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Testimonials</a></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <!-- Toggler -->
+                <div class="collapse-toggler">
+                  <p class="f-d-18 f-m-30">Contact</p>
+                  <div class="simbol d-mobile f-m-30">
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                  </div>
+                </div>
+                <!-- Collapse -->
+                <div class="collapse">
+                  <div>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Locations</a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#">Contact</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Social -->
+          <div class="footer-social">
+            <p class="f-d-18 f-m-26">Follow us</p>
+            <ul>
+              <!-- Item -->
+              <li>
+                <a href="#"><img class="lazy" data-src="img/icons/tw.svg" alt="sagent-img"></a>
+              </li>
+              <!-- Item -->
+              <li>
+                <a href="#"><img class="lazy" data-src="img/icons/in.svg" alt="sagent-img"></a>
+              </li>
+              <!-- Item -->
+              <li>
+                <a href="#"><img class="lazy" data-src="img/icons/fb.svg" alt="sagent-img"></a>
+              </li>
+            </ul>
+            <!-- Back To Top -->
+            <div class="back-to-top">
+              <a href="#"><img class="lazy" data-src="img/icons/back-to-top.svg" alt="sagent-img"></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copy -->
+        <div class="footer-copy">
+          <p class="f-d-14 f-m-26 light">Copyright Sagent Mangement LLC, 2021</p>
+          <a href="https://portfolio.elevate.co.il/" target="_blank" class="f-d-14 f-m-26 light">© 2021 Design by Elevate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lines -->
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
 
   <!-- Script (Vendor) -->
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
 
   <!-- Script -->
+  <script src="js/elevate-framework.js"></script>
   <script src="js/app.js"></script>
 
   <!-- Lazy Loading -->
