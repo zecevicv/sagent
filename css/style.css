@@ -901,6 +901,10 @@ body {
     display: none;
   }
 
+  .home-advantages .collapse-toggler {
+    cursor: initial;
+  }
+
   .home-advantages .collapsible::after {
     content: '';
     position: absolute;
