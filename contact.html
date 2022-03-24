@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sagent">
+  <title>Sagent</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Style (Vendor) -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/elevate-framework.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png">
+
+  <!-- Google Map -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+      // Basic options for a simple Google Map
+      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+      var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 11,
+
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+        // How you would like to style the map. 
+        // This is where you would paste any style found on Snazzy Maps.
+        styles: [{
+          "featureType": "all",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#f5f5f5"
+          }]
+        }, {
+          "featureType": "all",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#616161"
+          }]
+        }, {
+          "featureType": "all",
+          "elementType": "labels.text.stroke",
+          "stylers": [{
+            "color": "#f5f5f5"
+          }]
+        }, {
+          "featureType": "all",
+          "elementType": "labels.icon",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "administrative.country",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#9e9e9e"
+          }, {
+            "lightness": 35
+          }, {
+            "weight": 0.5
+          }]
+        }, {
+          "featureType": "administrative.province",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#bdbdbd"
+          }]
+        }, {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#eeeeee"
+          }]
+        }, {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#757575"
+          }]
+        }, {
+          "featureType": "poi.park",
+          "elementType": "labels.text",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "poi.park",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#9e9e9e"
+          }]
+        }, {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#ffffff"
+          }]
+        }, {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#dadada"
+          }]
+        }, {
+          "featureType": "road.highway",
+          "elementType": "labels",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#616161"
+          }]
+        }, {
+          "featureType": "road.arterial",
+          "elementType": "labels",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "road.arterial",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#757575"
+          }]
+        }, {
+          "featureType": "road.local",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "road.local",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#9e9e9e"
+          }]
+        }, {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#e5e5e5"
+          }, {
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "transit.station",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "transit.station",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#eeeeee"
+          }]
+        }, {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#c9c9c9"
+          }]
+        }, {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "color": "#9e9e9e"
+          }]
+        }]
+      };
+
+      // Get the HTML DOM element that will contain your map 
+      // We are using a div with id="map" seen below in the <body>
+      var mapElement = document.getElementById('map');
+
+      // Create the Google Map using our element and options defined above
+      var map = new google.maps.Map(mapElement, mapOptions);
+
+      // Let's also add a marker while we're at it
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(40.6700, -73.9400),
+        map: map,
+        title: 'Snazzy!'
+      });
+    }
+  </script>
+
+</head>
+
+<body class="contact-page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <!-- Logo -->
+      <div class="header-logo">
+        <a href="#"><img class="lazy" data-src="img/global/logo.png" alt="sagent-img"></a>
+      </div>
+      <!-- Menu -->
+      <div class="header-menu d-desktop">
+        <div class="header-links">
+          <ul class="f-d-18 light">
+            <!-- Item -->
+            <li>
+              <a href="#" class="link"><span>About Us</span></a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#" class="link"><span>Services</span></a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#" class="link"><span>Clients</span></a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#" class="link"><span>Contact</span></a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#" class="header-btn f-d-16">Global <img src="img/icons/chevron-down.svg" alt="sagent-img"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Action -->
+      <div class="header-action d-mobile">
+        <div class="header-hamburger">
+          <a href="#"><img src="img/icons/hamburger.svg" alt="sagent-img"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <div class="container">
+      <!-- Img -->
+      <div class="img">
+        <picture>
+          <source media="(min-width:1024px)" srcset="img/contact/banner.jpg">
+          <img class="lazy" data-src="img/contact/banner-mobile.jpg" alt="sagent-img">
+        </picture>
+      </div>
+      <!-- Scroll -->
+      <div class="banner-scroll d-desktop">
+        <a href="#" class="f-d-18 f-m-30 light"><img class="lazy" data-src="img/icons/arrow-left.svg" alt="sagent-img"> Scroll</a>
+      </div>
+      <!-- Text -->
+      <div class="text">
+        <h1 class="f-d-55 f-m-60 medium">REACH OUT</h1>
+        <p class="f-d-22 f-m-40 light">SAGENT'S UNIQUE GLOBAL STRUCTURE ENCOMPASSES THE USA, ISRAEL AND TAIWAN, EMPOWERING CLIENTS TO ACCESS BOTH EXPERT LOCAL SERVICES AND OUR GLOBAL EXPERTISE + NETWORK.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact info -->
+  <div class="contact-info">
+    <div class="container">
+      <!-- Heading -->
+      <div class="heading">
+        <h2 class="section-title f-d-45 f-m-50 medium">
+          Contact us
+        </h2>
+      </div>
+      <!-- Box -->
+      <div class="box">
+        <h3 class="f-d-18 f-m-30 regular">Clients can transfer service control to any office, to suit their unique business and expansion needs.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+        <ul>
+          <!-- Item -->
+          <li>
+            <h4 class="section-title f-d-18 f-m-28 semi-bold">United States</h4>
+            <p class="f-d-18 f-m-28 light">
+              <img class="lazy" data-src="img/icons/location-blue.svg" alt="sagent-img">
+              <span class="light">
+                691 S. Milpitas Blvd.
+                <br>Suite 212 Milpitas, CA 95035
+              </span>
+            </p>
+          </li>
+          <!-- Item -->
+          <li>
+            <h4 class="section-title f-d-18 f-m-28 semi-bold">United States</h4>
+            <p class="f-d-18 f-m-28 light">
+              <img class="lazy" data-src="img/icons/location-blue.svg" alt="sagent-img">
+              <span class="light">
+                691 S. Milpitas Blvd.
+                <br>Suite 212 Milpitas, CA 95035
+              </span>
+            </p>
+          </li>
+          <!-- Item -->
+          <li>
+            <h4 class="section-title f-d-18 f-m-28 semi-bold">United States</h4>
+            <p class="f-d-18 f-m-28 light">
+              <img class="lazy" data-src="img/icons/location-blue.svg" alt="sagent-img">
+              <span class="light">
+                691 S. Milpitas Blvd.
+                <br>Suite 212 Milpitas, CA 95035
+              </span>
+            </p>
+          </li>
+          <!-- Item -->
+          <li>
+            <h4 class="section-title f-d-18 f-m-28 semi-bold">United States</h4>
+            <p class="f-d-18 f-m-28 light">
+              <img class="lazy" data-src="img/icons/location-blue.svg" alt="sagent-img">
+              <span class="light">
+                691 S. Milpitas Blvd.
+                <br>Suite 212 Milpitas, CA 95035
+              </span>
+            </p>
+          </li>
+          <!-- Item -->
+          <li>
+            <h4 class="section-title f-d-18 f-m-28 semi-bold">United States</h4>
+            <p class="f-d-18 f-m-28 light">
+              <img class="lazy" data-src="img/icons/location-blue.svg" alt="sagent-img">
+              <span class="light">
+                691 S. Milpitas Blvd.
+                <br>Suite 212 Milpitas, CA 95035
+              </span>
+            </p>
+          </li>
+          <!-- Item -->
+          <li>
+            <h4 class="section-title f-d-18 f-m-28 semi-bold">United States</h4>
+            <p class="f-d-18 f-m-28 light">
+              <img class="lazy" data-src="img/icons/location-blue.svg" alt="sagent-img">
+              <span class="light">
+                691 S. Milpitas Blvd.
+                <br>Suite 212 Milpitas, CA 95035
+              </span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div class="map">
+    <div id="map"></div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <div class="container">
+      <div class="img d-desktop">
+        <img class="lazy" data-src="img/contact/contact-img.jpg" alt="sagent-img">
+      </div>
+      <div class="text">
+        <h2 class="f-d-45 d-desktop text-blue">Send a Note</h2>
+        <form>
+          <input type="text" class="input-secondary f-d-18 f-m-30 light" placeholder="Name">
+          <input type="text" class="input-secondary f-d-18 f-m-30 light" placeholder="Phone">
+          <input type="text" class="input-secondary f-d-18 f-m-30 light" placeholder="Email">
+          <input type="text" class="input-secondary f-d-18 f-m-30 light" placeholder="Company Name">
+          <select class="select-secondary f-d-18 f-m-30 light">
+            <option value="1">Location</option>
+            <option value="2">Location</option>
+          </select>
+          <select class="select-secondary f-d-18 f-m-30 light">
+            <option value="1">Service</option>
+            <option value="2">Service</option>
+          </select>
+          <input type="text" class="input-secondary f-d-18 f-m-30 light" placeholder="Message">
+        </form>
+        <a href="#" class="link f-d-20 f-m-30 light"><span>Submit</span> <img class="lazy" data-src="img/icons/arrow-circled-right-black.svg" alt="sagent-img"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <!-- Main -->
+        <div class="footer-main">
+          <!-- Info -->
+          <div class="footer-info">
+            <div class="footer-logo"><img class="lazy" data-src="img/global/logo.png" alt="sagent-img"></div>
+            <p class="f-d-16 f-m-26 light">Company Number: OC 111-111
+              <br><br>
+              Registered Address: 732 N. Diamond Bar Blvd.
+              <br>
+              Suite 224 Diamond Bar, CA 91765</p>
+          </div>
+          <!-- Menu -->
+          <div class="footer-menu">
+            <!-- Accordion -->
+            <div class="accordion">
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <p class="f-d-18 f-m-30"><a href="#">Home Page</a></p>
+              </div>
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <!-- Toggler -->
+                <div class="collapse-toggler">
+                  <p class="f-d-18 f-m-30">About Us</p>
+                  <div class="simbol d-mobile f-m-30">
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                  </div>
+                </div>
+                <!-- Collapse -->
+                <div class="collapse">
+                  <div>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Company</span></a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Vision</span></a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Team</span></a></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <!-- Toggler -->
+                <div class="collapse-toggler">
+                  <p class="f-d-18 f-m-30">Services</p>
+                  <div class="simbol d-mobile f-m-30">
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                  </div>
+                </div>
+                <!-- Collapse -->
+                <div class="collapse">
+                  <div>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Financial</span></a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Tax</span></a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Consulting</span></a></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <!-- Toggler -->
+                <div class="collapse-toggler">
+                  <p class="f-d-18 f-m-30">Clients</p>
+                  <div class="simbol d-mobile f-m-30">
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                  </div>
+                </div>
+                <!-- Collapse -->
+                <div class="collapse">
+                  <div>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Our Clients</span></a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Testimonials</span></a></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Collapsible -->
+              <div class="collapsible">
+                <!-- Toggler -->
+                <div class="collapse-toggler">
+                  <p class="f-d-18 f-m-30">Contact</p>
+                  <div class="simbol d-mobile f-m-30">
+                    <div class="plus">+</div>
+                    <div class="minus">-</div>
+                  </div>
+                </div>
+                <!-- Collapse -->
+                <div class="collapse">
+                  <div>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Locations</span></a></p>
+                    <p class="f-d-18 f-m-30 light"><a href="#" class="link"><span>Contact</span></a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Social -->
+          <div class="footer-social">
+            <p class="f-d-18 f-m-26">Follow us</p>
+            <ul>
+              <!-- Item -->
+              <li>
+                <a href="#"><img class="lazy" data-src="img/icons/tw.svg" alt="sagent-img"></a>
+              </li>
+              <!-- Item -->
+              <li>
+                <a href="#"><img class="lazy" data-src="img/icons/in.svg" alt="sagent-img"></a>
+              </li>
+              <!-- Item -->
+              <li>
+                <a href="#"><img class="lazy" data-src="img/icons/fb.svg" alt="sagent-img"></a>
+              </li>
+            </ul>
+            <!-- Back To Top -->
+            <div class="back-to-top">
+              <a href="#"><img class="lazy" data-src="img/icons/back-to-top.svg" alt="sagent-img"></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copy -->
+        <div class="footer-copy">
+          <p class="f-d-14 f-m-26 light">Copyright Sagent Mangement LLC, 2021</p>
+          <a href="https://portfolio.elevate.co.il/" target="_blank" class="f-d-14 f-m-26 light">© 2021 Design by Elevate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lines -->
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- Script (Vendor) -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+
+  <!-- Script -->
+  <script src="js/elevate-framework.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Lazy Loading -->
+  <script src="js/lazyload.min.js"></script>
+  <script>
+    (function () {
+      ll = new LazyLoad({});
+    })();
+  </script>
+
+</body>
+
+</html>
