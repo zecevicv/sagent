@@ -725,6 +725,12 @@ body {
   line-height: 1.72;
 }
 
+@media (min-width: 1024px) {
+  .banner .text {
+    min-height: 15.625vw;
+  }
+}
+
 @media (max-width: 1023.98px) {
   .banner {
     padding-bottom: 0;
@@ -1685,5 +1691,25 @@ body {
   .contact-info ul p img {
     width: 2.5vw;
     margin-right: 2vw;
+  }
+}
+
+/* #Clients Page
+================================================== */
+@media (min-width: 1024px) {
+  .clients-page .home-clients {
+    margin-top: 0;
+    margin-bottom: 1vw;
+  }
+  
+  .clients-page .home-clients .heading {
+    margin-bottom: 3.65vw;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .clients-page .home-clients {
+    margin-top: 11vw;
+    margin-bottom: 0;
   }
 }
