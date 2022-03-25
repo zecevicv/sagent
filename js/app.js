@@ -12,7 +12,6 @@ if (hamburgerBtn) {
 }
 
 // Color Change
-
 if (document.querySelector('.header')) {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
@@ -101,5 +100,24 @@ if (document.querySelector('.testimonials .swiper')) {
     pagination: {
       el: ".testimonials .swiper-pagination",
     },
+  });
+}
+
+/* #Team
+  ======================================================= */
+if (document.querySelector('.team .swiper')) {
+  new Swiper(".team .swiper", {
+    navigation: {
+      nextEl: ".team .next",
+      prevEl: ".team .prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2.4
+      },
+      1024: {
+        slidesPerView: 3.77
+      }
+    }
   });
 }
