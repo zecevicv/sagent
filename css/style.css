@@ -175,6 +175,10 @@ body {
   z-index: 1;
 }
 
+body.no-scroll .lines .line {
+  z-index: 1000000;
+} 
+
 .lines .line:nth-child(1) {
   left: 13%;
 }
@@ -277,32 +281,45 @@ body {
   width: 80%;
   margin-right: 5.36vw;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
 .header-links ul {
   display: flex;
-  align-items: center;
+}
+
+.header-links ul > li > a {
+  padding-top: .22vw;
 }
 
 .header-links ul li:not(:last-child) {
   margin-right: 2.6vw;
 }
 
-.header-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.header .collapsible {
   border: 1px solid white;
-  border-radius: 500px;
-  height: 1.8vw;
+  border-radius: 1.25vw;
   padding: 0 .78vw;
 }
 
-.header-btn img {
+.header .collapse-toggler a {
+  display: flex;
+  align-items: center;
+  height: 1.8vw;
+}
+
+.header .collapsible img {
   width: .73vw;
   margin-left: 1.04vw;
+  transition: all .4s ease;
+}
+
+.header .collapsible.show img {
+  transform: rotate(180deg);
+}
+
+.header .collapse > div {
+  padding-bottom: .416vw;
 }
 
 .header-logo img {
@@ -325,6 +342,95 @@ body {
 
   .header-logo img {
     width: 30vw;
+  }
+
+  .header-menu {
+    position: fixed;
+    top: 17.6vw;
+    left: 0;
+    height: calc(100vh - 17.6vw);
+    width: 100%;
+    background-image: url('../img/global/menu-bg.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 16.66vw 6.65vw 0 6.65vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+  }
+
+  .header.show .header-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .header-links ul li:not(:last-child) {
+    width: 100%;
+  }
+
+  .header-links ul li:not(:last-child) {
+    border-top: 1px solid white;
+    padding: 2.66vw 0;
+  }
+
+  .header-links ul li:first-child {
+    border-top: none;
+  }
+
+  .header .collapsible {
+    margin-top: 14.66vw;
+    border-radius: 4vw;
+    padding: 3.73vw 12vw 3.73vw 4.93vw;
+  }
+  
+  .header .collapse-toggler a {
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+  
+  .header .collapsible img {
+    display: none;
+  }
+
+  .header .collapse {
+    height: auto!important;
+  }
+  
+  .header .collapse > div {
+    padding-bottom: 0;
+    padding-top: 2vw;
+  }
+
+  .header-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 46.66vw;
+    flex: 0 0 100%;
+  }
+  
+  .header-social ul {
+    display: flex;
+    align-items: center;
+    margin-left: 4.66vw;
+  }
+  
+  .header-social ul li:not(:last-child) {
+    margin-right: 2vw;
+  }
+  
+  .header-social img {
+    width: 10.4vw;
   }
 }
 
