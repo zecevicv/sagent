@@ -2584,3 +2584,89 @@ body.no-scroll .lines .line {
     margin-right: 8.66vw;
   }
 }
+
+/* #Text Content
+================================================== */
+.text-content {
+  padding-bottom: 7.8vw;
+}
+
+.text-content .container {
+  width: 74%;
+}
+
+.text-content .container > * {
+  padding-left: 1.3vw;
+}
+
+.text-content ol {
+  padding-left: 2.1vw!important;
+  line-height: 1.33;
+}
+
+.text-content h2 {
+  margin-bottom: 4.95vw;
+}
+
+.text-content h3 {
+  margin-bottom: 1vw;
+}
+
+.text-content p {
+  margin-bottom: 1.8vw;
+  line-height: 1.33;
+}
+
+.text-content ol:not(:last-child) {
+  margin-bottom: 2.6vw;
+}
+
+.text-content ol li:not(:last-child) {
+  margin-bottom: .6vw;
+}
+
+.text-content ol li {
+  padding-left: 1vw;
+}
+
+@media (max-width: 1023.98px) {
+  .text-content {
+    padding: 11.33vw 0 21.33vw 0;
+  }
+  
+  .text-content .container {
+    width: 92%;
+  }
+  
+  .text-content .container > * {
+    padding-left: 3.33vw;
+  }
+  
+  .text-content ol {
+    padding-left: 7vw!important;
+  }
+  
+  .text-content h2 {
+    margin-bottom: 3.33vw;
+  }
+  
+  .text-content h3 {
+    margin-bottom: 3.33vw;
+  }
+  
+  .text-content p {
+    margin-bottom: 7.33vw;
+  }
+  
+  .text-content ol:not(:last-child) {
+    margin-bottom: 12vw;
+  }
+  
+  .text-content ol li:not(:last-child) {
+    margin-bottom: 2.4vw;
+  }
+  
+  .text-content ol li {
+    padding-left: 3.33vw;
+  }
+}
