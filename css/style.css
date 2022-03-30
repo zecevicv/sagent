@@ -2501,3 +2501,86 @@ body.no-scroll .lines .line {
     margin-top: 0;
   }
 }
+
+/* #Error
+================================================== */
+.error {
+  display: flex;
+}
+
+.error > * {
+  flex: 0 0 50%;
+}
+
+.error .img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.error .text {
+  background-image: linear-gradient(to bottom left, #1177D1, #18005D);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: .5vw;
+}
+
+.error h1 {
+  line-height: 1;
+}
+
+.error h2 {
+  margin-bottom: 2vw;
+}
+
+.error h3 {
+  margin-bottom: 5.2vw;
+}
+
+.error .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error .links a:not(:last-child) {
+  margin-right: 4vw;
+}
+
+@media (max-width: 1023.98px) {
+  .error {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .error > * {
+    flex: 0;
+  }  
+  
+  .error .img img {
+    height: 90.26vw;
+  }
+  
+  .error .text {
+    padding: 24vw 0 14.66vw 0;
+    flex-grow: 1;
+  }
+  
+  .error h2 {
+    margin-bottom: 2.66vw;
+  }
+  
+  .error h3 {
+    margin-bottom: 8.66vw;
+  }
+  
+  .error .links a:not(:last-child) {
+    margin-right: 8.66vw;
+  }
+}
